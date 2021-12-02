@@ -2,6 +2,7 @@ fun main() {
     fun part1(input: List<String>): Int {
         val input = input.map { it.toInt() }
         var count =  0
+
         for (i in 1 until input.size) {
             if (input[i-1] < input[i]) count++
         }
