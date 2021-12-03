@@ -3,9 +3,7 @@ fun main() {
         val input = input.map { it.toInt() }
         var count =  0
 
-        for (i in 1 until input.size) {
-            if (input[i-1] < input[i]) count++
-        }
+        for (i in 1 until input.size) if (input[i-1] < input[i]) count++
         return count
     }
 
@@ -16,9 +14,7 @@ fun main() {
 
         input.windowed(3).forEach { window ->
             val sum = window.sum()
-            if (sum > lastSum && lastSum != 0) {
-                count++
-            }
+            if (sum > lastSum && lastSum != 0) count++
             lastSum = sum
         }
         return count
